@@ -7,7 +7,7 @@ Cucumber
 Maven
 
 How to run the test ?
-Clone the repostory locally
+Clone the repostory locally (git clone https://bothi@bitbucket.org/bothi/testautomation.git)
 create a Junit Runner with following VM options (Framework supports running tests using firefox and chrome browsers)
 -Dbrowser=firefox -Dcucumber.options="--tags @test"
 
