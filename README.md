@@ -8,8 +8,10 @@ Maven
 
 How to run the test ?
 Clone the repostory locally (git clone https://bothi@bitbucket.org/bothi/testautomation.git)
-create a Junit Runner with following VM options (Framework supports running tests using firefox and chrome browsers)
+create a Junit Runner with following VM options (Framework supports running tests using latest firefox and chrome browsers)
+Runner Class to be selected is : com.blackcat.CucumberRunner
 -Dbrowser=firefox -Dcucumber.options="--tags @test"
+
 
 Driver Executables:
 GeckoDriver and ChromeDriver executable places inside /src/test/resources/drivers folder
