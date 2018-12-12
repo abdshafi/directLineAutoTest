@@ -1,4 +1,4 @@
-# BlackCat Technical Test for QA Automation
+# GreenApp Technical Test for QA Automation
 
 The candidate needs to write a Selenium Webdriver test using Cucumber in Java to perform a critical test that will verify that the website https://e.ggtimer.com/ behaves as expected. The website has the ability to set a countdown timer of the users choosing in either seconds (default), minutes or hours. The time for this exercise should be time boxed to 1 hour.
 
