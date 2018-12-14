@@ -25,6 +25,7 @@ public class Hooks extends DriverFactory{
         if(scenario.isFailed()){
             embedScreenshot(scenario);
         }
+        LOG.info("###### Finished Scenario : {} ######", scenario.getStatus());
     }
 
     private void embedScreenshot(Scenario scenario) {
