@@ -29,7 +29,7 @@ This Test Framework is built with Following tech stack:
 
 * Clone the repostory locally (git clone https://bothi@bitbucket.org/bothi/testautomation.git)
 * Create a Junit Runner with following VM options (Framework supports running tests using latest firefox and chrome browsers)
-* Runner Class to be selected is : com.blackcat.CucumberRunner
+* Runner Class to be selected is : com.blackcat.RunCuckesTest
     `-Dbrowser=firefox -Dcucumber.options="--tags @test"`
 
 #### Driver Executables:
