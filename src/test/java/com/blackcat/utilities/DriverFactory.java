@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Collections;
@@ -43,9 +44,10 @@ public class DriverFactory {
             driver = new ChromeDriver(capabilities);
         } else if (System.getProperty("browser").equalsIgnoreCase("firefox")) {
             System.setProperty(FIREFOX_DRIVER, testContext.readproperty("FIREFOX.DRIVER"));
-            DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-            capabilities.setCapability("marionette", true);
-            driver = new FirefoxDriver();
+            FirefoxOptions ffOptions = new FirefoxOptions();
+            ffOptions.setAcceptInsecureCerts(true);
+            ffOptions.setCapability("marionette", true);
+            driver = new FirefoxDriver(ffOptions);
         }
         return driver;
     }
