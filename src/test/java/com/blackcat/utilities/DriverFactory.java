@@ -37,9 +37,6 @@ public class DriverFactory {
     }
 
     private WebDriver getLocalDriver() {
-        if (workingOS.contains("mac")) {
-            options.addArguments("--kiosk");
-        }
         if (System.getProperty("browser").equalsIgnoreCase("chrome")) {
             DesiredCapabilities capabilities = getChromeDesiredCapabilities();
             System.setProperty(CHROME_DRIVER, testContext.readproperty("CHROME.DRIVER"));
