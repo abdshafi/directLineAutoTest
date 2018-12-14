@@ -67,6 +67,7 @@ public class DriverFactory {
         options.setExperimentalOption("prefs", chromePreferences);
         options.addArguments("--disable-web-security");
         options.addArguments("--test-type");
+        options.addArguments("--disable-browser-side-navigation");
 
         capabilities.setCapability("chrome.switches", Collections.singletonList("--no-default-browser-check"));
         capabilities.setCapability("chrome.switches", Collections.singletonList("--disable-logging"));
