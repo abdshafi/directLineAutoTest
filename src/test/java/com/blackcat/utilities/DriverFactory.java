@@ -1,10 +1,9 @@
 package com.blackcat.utilities;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
@@ -34,9 +33,10 @@ public class DriverFactory {
             driver = new ChromeDriver();
         } else if (System.getProperty("browser").equalsIgnoreCase("firefox")) {
             System.setProperty(FIREFOX_DRIVER, testContext.readproperty("FIREFOX.DRIVER"));
-            DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-            capabilities.setCapability("marionette", true);
-            driver = new FirefoxDriver();
+            FirefoxOptions ffOptions = new FirefoxOptions();
+            ffOptions.addPreference("marionette", false);
+            ffOptions.setAcceptInsecureCerts(true);
+            driver = new FirefoxDriver(ffOptions);
         }
         return driver;
     }
@@ -44,7 +44,4 @@ public class DriverFactory {
     public WebDriver getDriver(){
         return driver;
     }
-
-
-
 }

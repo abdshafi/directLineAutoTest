@@ -8,9 +8,9 @@ Feature: login to the Application
     And user click on login button
 
 
-  Scenario: Given valid username and password should be able to login to the application.
+  Scenario: valid username and password should be able to login to the application
     Then user should see the homepage
 
-   Scenario: Given user logged in and user has to see the history page
+   Scenario: user logged in and user has to see the history page
      And click on All history menu
      Then user should see all the information
