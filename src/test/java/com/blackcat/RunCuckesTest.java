@@ -11,12 +11,13 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-                 format ={"html:target/cucumber-html-report", "json:target/cucumber-json-report.json"},
+                 format ={"html:target/cucumber-html-report", "json:target/cucumber.json"},
+                 tags = {"@test"},
                  features ="src/test/resources/features",
                  glue = {"com.blackcat.utilities",
                          "com.blackcat.stepdefinitions"})
 
-public class CucumberRunner extends Setup {
+public class RunCuckesTest extends Setup {
 
 }
 
