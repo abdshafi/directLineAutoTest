@@ -13,7 +13,6 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
   <profiles>
     <profile>
       <id>bddtest</id>
@@ -22,10 +21,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
-            <version>2.22.1</version>
-            <scope>test</scope>
-            <configuration>
-            </configuration>
+            <version>3.0.0-M3</version>
             <executions>
               <execution>
                 <goals>
@@ -38,15 +34,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.22.1</version>
-            <configuration>
-              <!--<includes>-->
-                <!--<include>**/RunTest.java</include>-->
-              <!--</includes>-->
-              <systemPropertyVariables>
-                <BrowserType>Firefox</BrowserType>
-              </systemPropertyVariables>
-            </configuration>
+            <version>3.0.0-M3</version>
           </plugin>
         </plugins>
       </build>
