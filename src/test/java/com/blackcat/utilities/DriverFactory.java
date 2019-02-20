@@ -1,5 +1,6 @@
 package com.blackcat.utilities;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -40,7 +41,8 @@ public class DriverFactory {
     private WebDriver getLocalDriver() {
         if (System.getProperty("browser").equalsIgnoreCase("chrome")) {
             ChromeOptions options = getChromeCustomOptions();
-            System.setProperty(CHROME_DRIVER, testContext.readproperty("CHROME.DRIVER"));
+//            System.setProperty(CHROME_DRIVER, testContext.readproperty("CHROME.DRIVER"));
+            WebDriverManager.getInstance(ChromeDriver.class).setup();
             driver = new ChromeDriver(options);
         } else if (System.getProperty("browser").equalsIgnoreCase("firefox")) {
             System.setProperty(FIREFOX_DRIVER, testContext.readproperty("FIREFOX.DRIVER"));
@@ -73,4 +75,5 @@ public class DriverFactory {
         options.setCapability("chrome.verbose", false);
         return options;
     }
+
 }
