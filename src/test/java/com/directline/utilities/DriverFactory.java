@@ -1,4 +1,4 @@
-package com.blackcat.utilities;
+package com.directline.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -13,9 +13,6 @@ import java.util.Collections;
 import java.util.HashMap;
 
 
-/**
- * Created by bothees on 27/11/2018.
- */
 public class DriverFactory {
 
     public static WebDriver driver;

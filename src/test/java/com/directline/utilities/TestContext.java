@@ -1,13 +1,11 @@
-package com.blackcat.utilities;
+package com.directline.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-/**
- * Created by bothees on 27/11/2018.
- */
+
 public class TestContext {
 
     Properties prop = new Properties();
